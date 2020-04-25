@@ -1,0 +1,62 @@
+@import "./utils/_vars";
+
+.header {
+  &__top {
+    height: 60px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 30px;
+    height: 30px;
+    background: url("../images/logo.png");
+  }
+
+  &__nav {
+    display: flex;
+
+    @media screen and (max-width: 500px) {
+      width: auto;
+    }
+  }
+
+  &__user-logo {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-self: center;
+    background: url("../images/user-logo.jpg");
+  }
+
+  &__bottom {
+    height: 464px;
+    background: url("../images/header-bottom.jpg");
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    list-style: none;
+
+    @media screen and (max-width: 400px) {
+      display: none;
+    }
+  }
+
+  &__item {
+    margin-right: 30px;
+
+    @media screen and (max-width: 500px) {
+      margin-right: 5px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $main-color;
+  }
+}

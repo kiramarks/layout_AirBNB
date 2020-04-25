@@ -1,0 +1,30 @@
+@import "./utils/_vars";
+
+.amenities {
+  margin-top: 45px;
+
+  &__heading {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 23px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 170px);
+    grid-gap: 13px 20px;
+
+    @media screen and (max-width: 500px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__link {
+    margin-top: 20px;
+    text-decoration: none;
+    color: $main-color;
+    line-height: 19px;
+    font-weight: bold;
+  }
+}
