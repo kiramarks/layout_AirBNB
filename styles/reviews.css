@@ -1,0 +1,28 @@
+.reviews {
+  max-width: 490px;
+  margin-top: 65px; }
+
+.post__top {
+  width: 190px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.post__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #c4c4c4; }
+
+.post__head-container {
+  -ms-flex-item-align: end;
+      align-self: flex-end; }
+
+.post__text {
+  font-size: 16px;
+  line-height: 1.5; }
+
+/*# sourceMappingURL=reviews.css.map */

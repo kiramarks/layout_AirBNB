@@ -1,0 +1,98 @@
+.flat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media screen and (max-width: 660px) {
+    .flat {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+  .flat__info-container {
+    width: 490px; }
+    @media screen and (max-width: 500px) {
+      .flat__info-container {
+        width: auto; } }
+  .flat__heading {
+    font-size: 36px;
+    line-height: 42px; }
+  .flat__subheading {
+    color: #687c94; }
+  .flat__roominess {
+    width: 230px;
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .flat__text {
+    margin: 30px 0;
+    line-height: 24px; }
+    @media screen and (max-width: 999px) {
+      .flat__text {
+        width: 300px; } }
+    @media screen and (max-width: 660px) {
+      .flat__text {
+        width: auto; } }
+  .flat__link {
+    text-decoration: none;
+    color: #3d4e61;
+    line-height: 19px;
+    font-weight: bold; }
+  .flat__book-form {
+    border: 1px solid #e1e7ed;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 3px; }
+
+.form {
+  width: 330px;
+  height: 320px;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media screen and (max-width: 660px) {
+    .form {
+      margin: 30px auto 0; } }
+  @media screen and (max-width: 400px) {
+    .form {
+      width: auto; } }
+  .form__input {
+    height: 50px;
+    margin: 16px 0;
+    padding: 14px 17px;
+    border: 1px solid #e1e7ed;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 3px;
+    color: #3d4e61;
+    font-family: Avenir, sans-serif;
+    font-size: 16px;
+    line-height: 19px; }
+    .form__input:nth-of-type(1) {
+      margin-top: 32px;
+      margin-bottom: 0; }
+  .form__button {
+    height: 50px;
+    margin-top: 16px;
+    font-family: Avenir, sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    border-radius: 4px;
+    color: white;
+    background: #fd5c63; }
+
+/*# sourceMappingURL=flat.css.map */

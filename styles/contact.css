@@ -1,0 +1,33 @@
+.contact {
+  max-width: 490px;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .contact__heading {
+    margin-bottom: 10px; }
+  .contact__subheading {
+    margin: 0 0 7px;
+    font-size: 14px;
+    line-height: 16px; }
+  .contact__text {
+    line-height: 1.5; }
+  .contact__button {
+    width: 150px;
+    height: 50px;
+    margin-bottom: 75px;
+    font-family: Avenir, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #118488;
+    border: 1px solid #118488;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 4px; }
+
+/*# sourceMappingURL=contact.css.map */
