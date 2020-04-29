@@ -1,0 +1,38 @@
+@import "./utils/_vars";
+@import "./utils/_mixins";
+
+.contact {
+  max-width: $main-info-width;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+
+  &__heading {
+    margin-bottom: 10px;
+  }
+
+  &__subheading {
+    margin: 0 0 7px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__text {
+    line-height: 1.5;
+  }
+
+  &__button {
+    width: 150px;
+    height: 50px;
+    margin-bottom: 75px;
+    font-family: Avenir, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: $button-second-color;
+    border: 1px solid $button-second-color;
+    box-sizing: border-box;
+    border-radius: 4px;
+    @include buttonFocus($button-second-color);
+  }
+}

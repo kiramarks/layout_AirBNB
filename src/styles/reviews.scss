@@ -1,0 +1,30 @@
+@import "./utils/_vars";
+
+.reviews {
+  max-width: $main-info-width;
+  margin-top: 65px;
+}
+
+.post {
+  &__top {
+    width: 190px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #c4c4c4;
+  }
+
+  &__head-container {
+    align-self: flex-end;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
