@@ -1,4 +1,5 @@
 @import "./utils/_vars";
+@import "./utils/_mixins";
 
 .flat {
   display: flex;
@@ -51,6 +52,7 @@
     color: $main-color;
     line-height: 19px;
     font-weight: bold;
+    @include linkHover($second-color);
   }
 
   &__book-form {
@@ -86,6 +88,7 @@
     font-family: Avenir, sans-serif;
     font-size: 16px;
     line-height: 19px;
+    @include inputFocus($second-color);
 
     &:nth-of-type(1) {
       margin-top: 32px;
@@ -102,5 +105,7 @@
     border-radius: 4px;
     color: white;
     background: $second-color;
+    cursor: pointer;
+    @include buttonFocus($second-color);
   }
 }

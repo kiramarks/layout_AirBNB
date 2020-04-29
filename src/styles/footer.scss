@@ -1,4 +1,5 @@
 @import "./utils/_vars";
+@import "./utils/_mixins";
 
 .footer {
   height: 215px;
@@ -23,7 +24,9 @@
   }
 
   &__link {
+    margin: 5px 0;
     text-decoration: none;
     color: $main-color;
+    @include linkHover($second-color);
   }
 }

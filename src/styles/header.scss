@@ -1,26 +1,28 @@
 @import "./utils/_vars";
+@import "./utils/_mixins";
 
 .header {
   &__top {
     height: 60px;
     padding: 0 20px;
     display: flex;
+    position: sticky;
+    top: 0;
+    background-color: white;
     justify-content: space-between;
     align-items: center;
+    z-index: 3;
   }
 
   &__logo {
     width: 30px;
     height: 30px;
     background: url("../images/logo.png");
+    @include linkHover($second-color);
   }
 
   &__nav {
     display: flex;
-
-    @media screen and (max-width: 500px) {
-      width: auto;
-    }
   }
 
   &__user-logo {
@@ -29,34 +31,66 @@
     display: flex;
     align-self: center;
     background: url("../images/user-logo.jpg");
+    @include linkHover($second-color);
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      display: none;
+    }
   }
 
   &__bottom {
     height: 464px;
-    background: url("../images/header-bottom.jpg");
+    background-image: url("../images/header-bottom.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 
 .nav {
+  @media screen and (max-width: $mobile-breakpoint) {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(100%);
+    background-color: rgba(white, 0.6);
+    z-index: 2;
+    overflow-y: hidden;
+    transition: transform 0.4s;
+
+    &--opened {
+      transform: translateX(0);
+    }
+  }
+
   &__list {
     display: flex;
     list-style: none;
 
-    @media screen and (max-width: 400px) {
-      display: none;
+    @media screen and (max-width: $mobile-breakpoint) {
+      margin-top: 120px;
+      flex-direction: column;
+      align-items: flex-start;
+      letter-spacing: 3px;
+      font-size: 24px;
+      color: white;
     }
   }
 
   &__item {
     margin-right: 30px;
 
-    @media screen and (max-width: 500px) {
-      margin-right: 5px;
+    @media screen and (max-width: $mobile-breakpoint) {
+      margin: 15px 0;
     }
   }
 
   &__link {
     text-decoration: none;
     color: $main-color;
+    @include linkHover($second-color);
   }
 }
