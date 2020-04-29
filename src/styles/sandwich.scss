@@ -1,98 +1,41 @@
 @import "./utils/_vars";
 
 .sandwich {
-  width: 30px;
-  height: 25px;
+  width: 24px;
+  height: 16px;
   position: relative;
-  bottom: 2px;
-  right: 5px;
-  cursor: pointer;
   display: none;
+  cursor: pointer;
   z-index: 3;
-
-  span {
-    background-color: $second-color;
-    position: absolute;
-    border-radius: 2px;
-    transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
-  }
-
-  &--clicked {
-    span {
-      &:first-child {
-        backface-visibility: hidden;
-        top: 15px;
-        transform: rotate(50deg);
-        transition: 0.55s;
-      }
-
-      &:nth-child(2) {
-        opacity: 0;
-      }
-
-      &:last-child {
-        backface-visibility: hidden;
-        top: 15px;
-        transform: rotate(-410deg);
-        transition: 0.55s;
-      }
-    }
-  }
-
-  span:nth-child(1) {
-    width: 100%;
-    height: 3px;
-    display: block;
-    top: 3px;
-    left: 0;
-  }
-
-  span:nth-child(2) {
-    width: 100%;
-    height: 3px;
-    display: block;
-    top: 13px;
-    left: 0;
-  }
-
-  span:nth-child(3) {
-    width: 100%;
-    height: 3px;
-    display: block;
-    bottom: 0;
-    left: 0;
-  }
-
-  &:not(&--clicked):hover span:nth-child(1) {
-    width: 100%;
-    height: 3px;
-    display: block;
-    top: 1px;
-    left: 0;
-    transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
-  }
-
-  &:not(&--clicked):hover span:nth-child(2) {
-    width: 100%;
-    height: 3px;
-    display: block;
-    top: 13px;
-    left: 0;
-    transition: 0.4s cubic-bezier(0.8, 0.5, 0.2, 1.4);
-  }
-
-  &:not(&--clicked):hover span:nth-child(3) {
-    width: 100%;
-    height: 3px;
-    display: block;
-    bottom: -2px;
-    left: 0;
-    transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
-  }
 
   @media screen and (max-width: $mobile-breakpoint) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  span {
+    display: block;
+    height: 2px;
+    background-color: $second-color;
+    transition: 0.4s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  }
+
+  &--clicked {
+
+    span {
+      &:first-child {
+        transform: translateY(6px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        transform: translateX(400%);
+        opacity: 0;
+      }
+
+      &:last-child {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
   }
 }
